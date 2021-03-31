@@ -23,7 +23,6 @@ export default function Page() {
                     arrayData.push(data[sol]);
                     fetch(getWeatherAPIUrl(obj.First_UTC)).then((earthRes) => {
                         earthRes.json().then((earthData) => {
-                            console.log(earthData.hourly);
                             const averagePressure = earthData.hourly.reduce((acc, val) => acc + val.pressure, 0) / earthData.hourly.length;
                             const preObject = {
                                 pressure: averagePressure,
