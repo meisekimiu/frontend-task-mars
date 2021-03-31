@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import {BarChart, Bar, CartesianGrid, Legend, Tooltip, XAxis, YAxis} from 'recharts';
 
-const MARS_API_KEY = "fAWxzeqUa1euI9ZmAxgjRLpkxe7vtHuUY7mWQdB7";
+const MARS_API_KEY = process.env.REACT_APP_NASA_API_KEY;
 const MARS_API_URL = `https://api.nasa.gov/insight_weather/?api_key=${MARS_API_KEY}&feedtype=json&ver=1.0`;
-const EARTH_API_KEY = "c36a14608329afdecc380aa66f1994bb";
+const EARTH_API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
 
 const getWeatherAPIUrl = function(date) {
     return `https://api.openweathermap.org/data/2.5/onecall/timemachine?lat=33.4484&lon=-112.0740&dt=${new Date(date) * 1 / 1000}&appid=${EARTH_API_KEY}`;
