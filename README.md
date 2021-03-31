@@ -1,6 +1,12 @@
-# Getting Started with Create React App
+# Frontend-Task-Mars
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Running the project
+
+You need to obtain both a NASA InSight API Key as well as an OpenWeatherMap API Key to run this product. Copy the ".env.template" file, rename it to ".env" and fill in the keys.
+
+From there, you can run the `yarn install` and `yarn start` scripts.
 
 ## Available Scripts
 
